@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Aarya TechForce</title>
+    
+    <link rel="icon" href="assets/img/logo.png">
+    <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/vendor/bootstrap-icons/bootstrap-icons.css">
+    <link rel="stylesheet" href="assets/vendor/aos/aos.css">
+    <link rel="stylesheet" href="assets/vendor/glightbox/css/glightbox.min.css">
+    <link rel="stylesheet" href="assets/vendor/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f8f9fa;
+        }
+
+        .portfolio {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+            padding: 50px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .portfolio-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+            background: white;
+        }
+
+        .portfolio-item:hover {
+            transform: translateY(-10px);
+        }
+
+        .portfolio-item img {
+            width: 100%;
+            display: block;
+            border-radius: 10px 10px 0 0;
+        }
+
+        .overlay {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .overlay h3 {
+            font-size: 22px;
+            color: #333;
+        }
+
+        .overlay p {
+            color: #555;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 15px;
+            background: #2575fc;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 10px;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: #1a5bbf;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body class="portfolio-page">
+
+    <header id="header" class="header d-flex align-items-center fixed-top">
+        <div class="container-fluid position-relative d-flex align-items-center justify-content-between">
+    
+          <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
+            <!-- Uncomment the line below if you also wish to use an image logo -->
+            <img src="assets/img/logo.png" alt="">
+            <h1 class="sitename">Aarya TechForce</h1>
+          </a>
+    
+          <nav id="navmenu" class="navmenu">
+            <ul>
+              <li><a href="index.html#hero" class="active">Home</a></li>
+              <li><a href="index.html#about">About</a></li>
+              <li><a href="index.html#services">Services</a></li>
+              <li><a href="Portfolio.html">Portfolio / Projects </a></li>
+              <li><a href="index.html#services">Blog</a></li>
+              <li><a href="index.html#services">Careers</a></li>
+              <li><a href="index.html#services">Services</a></li>
+         
+              <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+            <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+          </nav>
+    
+          <a class="btn-getstarted" href="index.html#about">Get Started</a>
+    
+        </div>
+      </header>
+
+    <main class="main">
+        <div class="page-title" data-aos="fade">
+            <div class="container text-center">
+                <h1>Our Portfolio</h1>
+                <p>Explore our past projects and successful implementations.</p>
+            </div>
+        </div>
+
+        <section class="portfolio">
+            <div class="portfolio-item">
+                <img src="assets/img/portfolio/project1.jpg" alt="AI-powered Chatbot">
+                <div class="overlay">
+                    <h3>AI-powered Chatbot</h3>
+                    <p>A smart chatbot solution for customer support automation.</p>
+                    <a href="#" class="btn">View Details</a>
+                </div>
+            </div>
+
+            <div class="portfolio-item">
+                <img src="assets/img/portfolio/project2.jpg" alt="E-commerce Platform">
+                <div class="overlay">
+                    <h3>E-commerce Platform</h3>
+                    <p>A feature-rich online shopping platform with secure payment integration.</p>
+                    <a href="#" class="btn">View Details</a>
+                </div>
+            </div>
+
+            <div class="portfolio-item">
+                <img src="assets/img/portfolio/project3.jpg" alt="Mobile Banking App">
+                <div class="overlay">
+                    <h3>Mobile Banking App</h3>
+                    <p>An intuitive banking application with real-time transactions.</p>
+                    <a href="#" class="btn">View Details</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer (Copied from Index Page) -->
+    <footer id="footer" class="footer">
+        <div class="container text-center">
+            <p>© <span>Copyright</span> <strong class="sitename">Aarya TechForce</strong>. All Rights Reserved</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+
+</body>
+</html>
