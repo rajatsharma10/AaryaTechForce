@@ -145,20 +145,20 @@ h6 {
 .header {
   color: var(--default-color);
   background-color: var(--background-color);
-  padding: 2px 0;
+  padding: 2px 10px;
   transition: all 0.5s;
   z-index: 997;
 }
 
 .header .logo {
-  width: 150px;  /* Adjust size as needed */
+  width: 50px;  /* Adjust size as needed */
   height: auto;  /* Maintains aspect ratio */
 }
 
 
 .header .logo img {
-  max-height: 100px; /* Increase size as needed */
-  width: auto; /* Maintain aspect ratio */
+  max-height: 150px; /* Increase size as needed */
+  width: 140px; /* Maintain aspect ratio */
   margin-right: 14px;
 }
 
