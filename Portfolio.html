@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Portfolio - Aarya TechForce</title>
 
-  <link rel="icon" href="assets/img/logo.png">
-  <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css">
-  <link rel="stylesheet" href="assets/vendor/bootstrap-icons/bootstrap-icons.css">
-  <link rel="stylesheet" href="assets/vendor/aos/aos.css">
-  <link rel="stylesheet" href="assets/vendor/glightbox/css/glightbox.min.css">
-  <link rel="stylesheet" href="assets/vendor/swiper/swiper-bundle.min.css">
-  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="icon" href="assets/img/logo.png"/>
+  <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css"/>
+  <link rel="stylesheet" href="assets/vendor/bootstrap-icons/bootstrap-icons.css"/>
+  <link rel="stylesheet" href="assets/vendor/aos/aos.css"/>
+  <link rel="stylesheet" href="assets/vendor/glightbox/css/glightbox.min.css"/>
+  <link rel="stylesheet" href="assets/vendor/swiper/swiper-bundle.min.css"/>
+  <link rel="stylesheet" href="assets/css/main.css"/>
 
   <style>
     .portfolio {
@@ -48,6 +48,10 @@
     }
     .overlay p {
       color: #555;
+    }
+    .rating {
+      color: #f4c150;
+      margin-bottom: 10px;
     }
     .btn {
       display: inline-block;
@@ -89,174 +93,208 @@
 </head>
 <body class="portfolio-page">
 
-    <header id="header" class="header d-flex align-items-center fixed-top">
-        <div class="container-fluid position-relative d-flex align-items-center justify-content-between">
-    
-          <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
-            <!-- Uncomment the line below if you also wish to use an image logo -->
-            <img src="assets/img/logo.jpeg" alt="">
-            
-          </a>
-    
-          <nav id="navmenu" class="navmenu">
-            <ul>
-              <li><a href="index.html#hero" class="active">Home</a></li>
-              <li><a href="index.html#about">About</a></li>
-              <li><a href="index.html#services">Services</a></li>
-              <li><a href="Portfolio.html">Portfolio / Projects </a></li>
-              <li><a href="index.html#services">Blog</a></li>
-              <li><a href="index.html#services">Careers</a></li>
-              <li><a href="index.html#services">Services</a></li>
-         
-              <li><a href="index.html#contact">Contact</a></li>
-            </ul>
-            <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-          </nav>
-    
-          <a class="btn-getstarted" href="index.html#about">Get Started</a>
-    
-        </div>
-      </header>
-<main class="main">
-  <div class="page-title" data-aos="fade">
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container-fluid position-relative d-flex align-items-center justify-content-between">
+      <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
+        <i class="bi bi-house-door" style="font-size: 36px; color: #2575fc;"></i>
+      </a>
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="index.html#hero" class="active">Home</a></li>
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="index.html#services">Services</a></li>
+          <li><a href="Portfolio.html">Portfolio / Projects</a></li>
+          <li><a href="index.html#blog">Blog</a></li>
+          <li><a href="index.html#careers">Careers</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+      <a class="btn-getstarted" href="index.html#about">Get Started</a>
+    </div>
+  </header>
+
+  <main class="main">
+    <div class="page-title" data-aos="fade">
+      <div class="container text-center">
+        <h1>Our Portfolio</h1>
+        <p>Explore our top-notch, innovative, and highly trusted projects developed with cutting-edge technologies.</p>
+      </div>
+    </div>
+
+    <section class="portfolio" id="project-grid">
+      <!-- Dynamic projects will be inserted here -->
+    </section>
+  </main>
+
+  <footer id="footer" class="footer">
     <div class="container text-center">
-      <h1>Our Portfolio</h1>
-      <p>Explore our top-notch, innovative, and highly trusted projects developed with cutting-edge technologies.</p>
+      <p>&copy; <span>Copyright</span> <strong class="sitename">Aarya TechForce</strong>. All Rights Reserved</p>
     </div>
-  </div>
+  </footer>
 
-  <section class="portfolio" id="project-grid">
-    <!-- Dynamic project items inserted by JS or server rendering -->
-  </section>
-</main>
-
-<!-- Footer -->
-<footer id="footer" class="footer">
-  <div class="container text-center">
-    <p>&copy; <span>Copyright</span> <strong class="sitename">Aarya TechForce</strong>. All Rights Reserved</p>
-  </div>
-</footer>
-
-<!-- Project Modal -->
-<div class="modal fade" id="projectModal" tabindex="-1" aria-labelledby="projectModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-lg">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="projectModalLabel">Project Title</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <p id="projectDescription"></p>
-        <h6>Tools & Technologies Used:</h6>
-        <ul class="tech-list" id="techList"></ul>
+  <!-- Modal -->
+  <div class="modal fade" id="projectModal" tabindex="-1" aria-labelledby="projectModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="projectModalLabel">Project Title</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="rating" id="modalRating"></div>
+          <p id="projectDescription"></p>
+          <h6>Tools & Technologies Used:</h6>
+          <ul class="tech-list" id="techList"></ul>
+        </div>
       </div>
     </div>
   </div>
-</div>
 
-<!-- Scripts -->
-<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-<script>
-  const projects = [
-    {
-      title: "AI-Powered Chatbot",
-      description: "An intelligent chatbot powered by natural language processing for seamless customer interaction and support automation.",
-      technologies: ["React.js", "Node.js", "Express", "UI/UX", "Automation Testing"]
-    },
-    {
-      title: "E-commerce Platform",
-      description: "A scalable, secure e-commerce solution with dynamic product listing, payment integration, and responsive design.",
-      technologies: ["Next.js", "Node.js", "Express", "AWS", "Manual Testing"]
-    },
-    {
-      title: "Banking App",
-      description: "User-friendly mobile banking with robust security, real-time transactions, and cloud-native deployment.",
-      technologies: ["React Native", "Cloud Testing", "AWS", "DevOps", "UI/UX"]
-    },
-    {
+  <!-- Scripts -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script>
+    const projects = [
+      {
+        title: "AI-Powered Chatbot",
+        description: "An intelligent chatbot powered by natural language processing for seamless customer interaction and support automation.",
+        technologies: ["React.js", "Node.js", "Express", "UI/UX", "Automation Testing"],
+        image: "assets/img/AI-Powered-Chatbot.png",
+        rating: 4.8
+      },
+      {
+        title: "E-commerce Platform",
+        description: "A scalable, secure e-commerce solution with dynamic product listing, payment integration, and responsive design.",
+        technologies: ["Next.js", "Node.js", "AWS", "MongoDB"],
+        image: "assets/img/projects/e-commerce.png",
+        rating: 4.5
+      },
+      {
+        title: "Banking App",
+        description: "User-friendly mobile banking with robust security, real-time transactions, and cloud-native deployment.",
+        technologies: ["React Native", "AWS", "DevOps", "Security"],
+        image: "assets/img/projects/banking-app.png",
+        rating: 4.9
+      },
+      {
       title: "DevOps Dashboard",
       description: "Integrated CI/CD dashboard for deployment monitoring and performance analytics, supporting Kubernetes and Docker.",
-      technologies: ["DevOps", "Docker", "Kubernetes", "AWS", "Automation Testing"]
+      technologies: ["DevOps", "Docker", "Kubernetes", "AWS", "Automation Testing","Jenkins","Prometheus & Grafana","Terraform","Ansible","Helm","GitHub Actions"],
+      image: "assets/img/projects/devops-dashboard.png",
+      rating: 4.2
     },
     {
       title: "Healthcare Analytics Portal",
       description: "Data-driven portal for hospital analytics and diagnostics powered by real-time data engineering pipelines.",
-      technologies: ["React.js", "Node.js", "Data Engineering", "AWS", "Cloud Testing"]
+      technologies: ["React.js", "Node.js", "Data Engineering", "AWS", "Cloud Testing"],
+      image: "assets/img/projects/healthcare-analytics.png",
+      rating: 5
     },
     {
       title: "SaaS CRM Solution",
       description: "Customer Relationship Management system with dynamic pipeline management and analytics dashboard.",
-      technologies: ["PHP", "Laravel", "AWS", "UI/UX", "Automation Testing"]
+      technologies: ["PHP", "Laravel", "AWS", "UI/UX", "Automation Testing"],
+      image: "assets/img/projects/saas-crm.png",
+      rating: 3.8
     },
     {
       title: "HRMS Web Application",
       description: "Complete HR management solution with attendance tracking, payroll, and performance analysis.",
-      technologies: ["Full Stack Development", "Node.js", "React.js", "Manual Testing"]
+      technologies: ["Full Stack Development", "Node.js", "React.js", "Manual Testing"],
+      image: "assets/img/projects/hrms-web.png",
+      rating: 4.8
     },
     {
       title: "Job Portal",
       description: "Interactive job search and application platform with employer dashboards and resume analytics.",
-      technologies: ["Next.js", "Express", "PHP", "UI/UX", "Cloud Testing"]
+      technologies: ["Next.js", "Express", "PHP", "UI/UX", "Cloud Testing"],
+      image: "assets/img/projects/job-portal.png",
+      rating: 4.5
     },
     {
       title: "Learning Management System",
       description: "LMS platform for institutions with course creation, assessments, and student tracking features.",
-      technologies: ["React.js", "Node.js", "DevOps", "AWS", "Automation Testing"]
+      technologies: ["React.js", "Node.js", "DevOps", "AWS", "Automation Testing"],
+      image: "assets/img/projects/learning-management.png",
+      rating: 3.8
     },
     {
       title: "Travel Booking Platform",
       description: "A fast and responsive travel portal with smart search, dynamic pricing, and integrated payment options.",
-      technologies: ["Full Stack", "React.js", "Node.js", "UI/UX", "DevOps"]
+      technologies: ["Full Stack", "React.js", "Node.js", "UI/UX", "DevOps"],
+      image: "assets/img/projects/travel-booking.png",
+      rating: 4.5
     },
     {
       title: "Salesforce Integration Project",
       description: "Integrated Salesforce CRM with enterprise systems for seamless data synchronization and customer insights.",
-      technologies: ["Salesforce", "Node.js", "AWS", "UI/UX", "Automation Testing"]
+      technologies: ["Salesforce", "Node.js", "AWS", "UI/UX", "Automation Testing"],
+      image: "assets/img/projects/salesforce-integration.png",
+      rating: 4.8
     },
     {
       title: "Data Analytics Dashboard",
       description: "Data analytics platform providing real-time data visualization, reporting, and business insights using big data tools.",
-      technologies: ["React.js", "Node.js", "Data Analytics", "AWS", "Cloud Testing"]
+      technologies: ["React.js", "Node.js", "Data Analytics", "AWS", "Cloud Testing"],
+      image: "assets/img/projects/data-analytics.png",
+      rating: 4.3
     }
   ];
 
-  const projectGrid = document.getElementById("project-grid");
-  const modal = new bootstrap.Modal(document.getElementById("projectModal"));
-  const titleEl = document.getElementById("projectModalLabel");
-  const descEl = document.getElementById("projectDescription");
-  const techListEl = document.getElementById("techList");
+    const projectGrid = document.getElementById("project-grid");
+    const modal = new bootstrap.Modal(document.getElementById("projectModal"));
+    const titleEl = document.getElementById("projectModalLabel");
+    const descEl = document.getElementById("projectDescription");
+    const techListEl = document.getElementById("techList");
+    const modalRatingEl = document.getElementById("modalRating");
 
-  projects.forEach((project, index) => {
-    const item = document.createElement("div");
-    item.className = "portfolio-item";
-    item.innerHTML = `
-      <img src="assets/img/portfolio/project${index + 1}.jpg" alt="${project.title}">
-      <div class="overlay">
-        <h3>${project.title}</h3>
-        <p>${project.description.substring(0, 80)}...</p>
-        <a href="#" class="btn" data-index="${index}">View Details</a>
-      </div>
-    `;
-    projectGrid.appendChild(item);
-  });
+    function generateStars(rating) {
+      const fullStars = Math.floor(rating);
+      const halfStar = rating % 1 >= 0.5;
+      let starsHtml = "";
 
-  projectGrid.addEventListener("click", function (e) {
-    if (e.target.tagName === "A" && e.target.classList.contains("btn")) {
-      e.preventDefault();
-      const index = e.target.getAttribute("data-index");
-      const project = projects[index];
-      titleEl.textContent = project.title;
-      descEl.textContent = project.description;
-      techListEl.innerHTML = "";
-      project.technologies.forEach(tech => {
-        const li = document.createElement("li");
-        li.textContent = tech;
-        techListEl.appendChild(li);
-      });
-      modal.show();
+      for (let i = 0; i < fullStars; i++) {
+        starsHtml += '<i class="bi bi-star-fill"></i>';
+      }
+      if (halfStar) {
+        starsHtml += '<i class="bi bi-star-half"></i>';
+      }
+      const emptyStars = 5 - fullStars - (halfStar ? 1 : 0);
+      for (let i = 0; i < emptyStars; i++) {
+        starsHtml += '<i class="bi bi-star"></i>';
+      }
+
+      return starsHtml + ` <span style="color:#666;">(${rating.toFixed(1)})</span>`;
     }
-  });
-</script>
+
+    projects.forEach((project, index) => {
+      const item = document.createElement("div");
+      item.classList.add("portfolio-item");
+
+      item.innerHTML = `
+        
+        <div class="overlay">
+          <h3>${project.title}</h3>
+          <div class="rating">${generateStars(project.rating)}</div>
+          <p>${project.description}</p>
+          <a href="#" class="btn" data-bs-toggle="modal" data-bs-target="#projectModal" data-index="${index}">View More</a>
+        </div>
+      `;
+      projectGrid.appendChild(item);
+    });
+
+    document.querySelectorAll('.btn').forEach(button => {
+      button.addEventListener('click', (event) => {
+        const index = event.target.getAttribute('data-index');
+        const project = projects[index];
+
+        titleEl.textContent = project.title;
+        descEl.textContent = project.description;
+        techListEl.innerHTML = project.technologies.map(tech => `<li>${tech}</li>`).join('');
+        modalRatingEl.innerHTML = generateStars(project.rating);
+      });
+    });
+  </script>
 
 </body>
 </html>

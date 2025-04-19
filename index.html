@@ -10,7 +10,7 @@
 
   <!-- Favicons -->
   <link href="assets/img/logo.jpeg" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
@@ -53,9 +53,8 @@
           <li><a href="index.html#about">About</a></li>
           <li><a href="index.html#services">Services</a></li>
           <li><a href="Portfolio.html">Portfolio / Projects </a></li>
-          <li><a href="index.html#services">Blog</a></li>
-          <li><a href="index.html#services">Careers</a></li>
-          <li><a href="index.html#services">Services</a></li>
+          <li><a href="Blog.html">Blog</a></li>
+          <li><a href="Carrers.html">Careers</a></li>
      
           <li><a href="index.html#contact">Contact</a></li>
         </ul>
@@ -72,7 +71,7 @@
     <!-- Hero Section -->
     <section id="hero" class="hero section dark-background">
 
-      <img src="assets/img/hero-bg.jpg" alt="" data-aos="fade-in">
+      <img src="assets/img/campaign-creators-gMsnXqILjp4-unsplash.jpg" alt="" data-aos="fade-in">
 
       <div class="container">
         <div class="row">
@@ -132,7 +131,7 @@
           <div class="col-xl-5 content">
             <h3>About Us</h3>
             <h2>To empower businesses globally by delivering high-quality, secure, and scalable IT solutions, enabling growth and success.</h2>
-            <p>Arya TechForce is a leading provider of IT solutions that bridges the gap between businesses and advanced technology. We specialize in ensuring smooth digital transformation through QA automation, web development, cloud services, and IT infrastructure management.</p>
+            <p>Aarya TechForce is a leading provider of IT solutions that bridges the gap between businesses and advanced technology. We specialize in ensuring smooth digital transformation through QA automation, web development, cloud services, and IT infrastructure management.</p>
             <a href="#" class="read-more"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
           </div>
 
@@ -239,126 +238,181 @@
     </section><!-- /Stats Section -->
 
     <!-- Services Section -->
-    <section id="services" class="services section">
+<!-- Services Section -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Services</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #000000, #0f2027);
+      color: #000000; /* Changed font color to black */
+    }
+    .section {
+      padding: 80px 0;
+    }
+    .section-title h2 {
+      font-size: 3rem;
+      font-weight: 700;
+      background: linear-gradient(to right, #0c0c0c, #020202);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    .service-item {
+      background: rgba(255, 255, 255, 0.08);
+      border-radius: 20px;
+      padding: 25px;
+      transition: transform 0.3s ease, background 0.3s ease;
+      box-shadow: 0 0 20px rgba(0, 114, 255, 0.2);
+      height: 100%;
+    }
+    .service-item:hover {
+      background: rgba(0, 114, 255, 0.15);
+      transform: translateY(-8px);
+    }
+    .service-item .icon {
+      font-size: 2.5rem;
+      margin-right: 15px;
+      color: #060909;
+    }
+    .service-item .title a {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: #000000; /* Title color set to black */
+      text-decoration: none;
+    }
+    .service-item .description {
+      font-size: 1.05rem;
+      color: #333333; /* Description text in dark grey for better contrast */
+    }
+    .service-item .title a:hover {
+      color: #00c6ff; /* Add hover effect for service links */
+    }
+  </style>
+</head>
+<body>
 
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Services</h2>
-        
-      </div><!-- End Section Title -->
+<section id="services" class="section">
+  <div class="container section-title">
+    <h2>Our Services</h2>
+  </div>
 
-      <div class="container">
-
-        <div class="row gy-4">
-
-          <div class="col-lg-6 " data-aos="fade-up" data-aos-delay="100">
-            <div class="service-item d-flex">
-              <div class="icon flex-shrink-0"><i class=""></i></div>
-              <div>
-                <h4 class="title"><a href="DevopsService.html" class="stretched-link">DevOps & Cloud</a></h4>
-                <p class="description">Accelerate your digital transformation with agile deployments, automated pipelines, and scalable cloud infrastructure—built for reliability and innovation at scale.</p>
-              </div>
-            </div>
+  <div class="container">
+    <div class="row gy-4">
+      <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+        <div class="service-item d-flex">
+          <div class="icon"><i class="bi bi-cloud"></i></div>
+          <div>
+            <h4 class="title"><a href="DevopsService.html">DevOps & Cloud</a></h4>
+            <p class="description">Accelerate your digital transformation with agile deployments, automated pipelines, and scalable cloud infrastructure—built for reliability and innovation at scale.</p>
           </div>
-          <!-- End Service Item -->
-
-          <div class="col-lg-6 " data-aos="fade-up" data-aos-delay="200">
-            <div class="service-item d-flex">
-              <div class="icon flex-shrink-0"><i class=""></i></div>
-              <div>
-                <h4 class="title"><a href="WebService.html" class="stretched-link"> Web Development
-                </a></h4>
-                <p class="description">Designing modern, responsive websites that convert—your digital presence crafted for impact, performance, and seamless interaction.</p>
-              </div>
-            </div>
-          </div><!-- End Service Item -->
-
-          <div class="col-lg-6 " data-aos="fade-up" data-aos-delay="300">
-            <div class="service-item d-flex">
-              <div class="icon flex-shrink-0"><i class=""></i></div>
-              <div>
-                <h4 class="title"><a href="QA-testing-services.html" class="stretched-link">QA & Testing</a></h4>
-                <p class="description">From automation to manual testing, we ensure flawless performance and bug-free launches with meticulous quality assurance at every development stage.</p>
-              </div>
-            </div>
-          </div><!-- End Service Item -->
-
-          <div class="col-lg-6 " data-aos="fade-up" data-aos-delay="400">
-            <div class="service-item d-flex">
-              <div class="icon flex-shrink-0"><i class=""></i></div>
-              <div>
-                <h4 class="title"><a href="MobileDevelopmentService.html" class="stretched-link">Mobile Development</a></h4>
-                <p class="description">Bring your brand to life on the go. We build intuitive, high-performance mobile apps that deliver exceptional user experiences across all devices.</p>
-              </div>
-            </div>
-          </div><!-- End Service Item -->
-
-          <div class="col-lg-6 " data-aos="fade-up" data-aos-delay="500">
-            <div class="service-item d-flex">
-              <div class="icon flex-shrink-0"><i class=""></i></div>
-              <div>
-                <h4 class="title"><a href="BlockChainService.html" class="stretched-link">Blockchain Development</a></h4>
-                <p class="description">Empowering trust and security through decentralized solutions. We develop blockchain-powered systems for finance, supply chain, and beyond.</p>
-              </div>
-            </div>
-          </div><!-- End Service Item -->
-
-          <div class="col-lg-6 " data-aos="fade-up" data-aos-delay="600">
-            <div class="service-item d-flex">
-              <div class="icon flex-shrink-0"><i class=""></i></div>
-              <div>
-                <h4 class="title"><a href="UIUX.html" class="stretched-link">UI/UX Design
-                </a></h4>
-                <p class="description">Human-centered design that’s both beautiful and functional. We turn user journeys into visual experiences that delight and convert.</p>
-              </div>
-            </div>
-          </div><!-- End Service Item -->
-          <div class="col-lg-6 " data-aos="fade-up" data-aos-delay="600">
-            <div class="service-item d-flex">
-              <div class="icon flex-shrink-0"><i class=""></i></div>
-              <div>
-                <h4 class="title"><a href="BackendServices.html" class="stretched-link">Backend Development
-                </a></h4>
-                <p class="description">Powering your applications with secure, scalable, and optimized backend architectures—crafted to handle complexity with ease.</p>
-              </div>
-            </div>
-          </div><!-- End Service Item -->
-          <div class="col-lg-6 " data-aos="fade-up" data-aos-delay="600">
-            <div class="service-item d-flex">
-              <div class="icon flex-shrink-0"><i class=""></i></div>
-              <div>
-                <h4 class="title"><a href="services-details.html" class="stretched-link">Desktop App Development
-                </a></h4>
-                <p class="description">Delivering feature-rich desktop applications for Windows, macOS, and Linux—blending performance with elegant usability.</p>
-              </div>
-            </div>
-          </div><!-- End Service Item -->
-          <div class="col-lg-6 " data-aos="fade-up" data-aos-delay="600">
-            <div class="service-item d-flex">
-              <div class="icon flex-shrink-0"><i class=""></i></div>
-              <div>
-                <h4 class="title"><a href="services-details.html" class="stretched-link">Chatbot Development
-                </a></h4>
-                <p class="description">Smart, conversational AI that enhances support and engagement. We build bots that learn, adapt, and elevate the user experience.</p>
-              </div>
-            </div>
-          </div><!-- End Service Item -->
-          <div class="col-lg-6 " data-aos="fade-up" data-aos-delay="600">
-            <div class="service-item d-flex">
-              <div class="icon flex-shrink-0"><i class=""></i></div>
-              <div>
-                <h4 class="title"><a href="services-details.html" class="stretched-link">AI Development
-                </a></h4>
-                <p class="description"></p>
-              </div>
-            </div>
-          </div><!-- End Service Item -->
-
         </div>
-
       </div>
 
-    </section><!-- /Services Section -->
+      <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+        <div class="service-item d-flex">
+          <div class="icon"><i class="bi bi-globe"></i></div>
+          <div>
+            <h4 class="title"><a href="WebService.html">Web Development</a></h4>
+            <p class="description">Designing modern, responsive websites that convert—your digital presence crafted for impact, performance, and seamless interaction.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
+        <div class="service-item d-flex">
+          <div class="icon"><i class="bi bi-bug"></i></div>
+          <div>
+            <h4 class="title"><a href="QA-testing-services.html">QA & Testing</a></h4>
+            <p class="description">From automation to manual testing, we ensure flawless performance and bug-free launches with meticulous quality assurance at every development stage.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-6" data-aos="fade-up" data-aos-delay="400">
+        <div class="service-item d-flex">
+          <div class="icon"><i class="bi bi-phone"></i></div>
+          <div>
+            <h4 class="title"><a href="MobileDevelopmentService.html">Mobile Development</a></h4>
+            <p class="description">Bring your brand to life on the go. We build intuitive, high-performance mobile apps that deliver exceptional user experiences across all devices.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-6" data-aos="fade-up" data-aos-delay="500">
+        <div class="service-item d-flex">
+          <div class="icon"><i class="bi bi-link-45deg"></i></div>
+          <div>
+            <h4 class="title"><a href="BlockChainService.html">Blockchain Development</a></h4>
+            <p class="description">Empowering trust and security through decentralized solutions. We develop blockchain-powered systems for finance, supply chain, and beyond.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-6" data-aos="fade-up" data-aos-delay="600">
+        <div class="service-item d-flex">
+          <div class="icon"><i class="bi bi-vector-pen"></i></div>
+          <div>
+            <h4 class="title"><a href="UIUX.html">UI/UX Design</a></h4>
+            <p class="description">Human-centered design that’s both beautiful and functional. We turn user journeys into visual experiences that delight and convert.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-6" data-aos="fade-up" data-aos-delay="700">
+        <div class="service-item d-flex">
+          <div class="icon"><i class="bi bi-hdd"></i></div>
+          <div>
+            <h4 class="title"><a href="BackendServices.html">Backend Development</a></h4>
+            <p class="description">Powering your applications with secure, scalable, and optimized backend architectures—crafted to handle complexity with ease.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-6" data-aos="fade-up" data-aos-delay="800">
+        <div class="service-item d-flex">
+          <div class="icon"><i class="bi bi-display"></i></div>
+          <div>
+            <h4 class="title"><a href="DesktopAppService.html">Desktop App Development</a></h4>
+            <p class="description">Delivering feature-rich desktop applications for Windows, macOS, and Linux—blending performance with elegant usability.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-6" data-aos="fade-up" data-aos-delay="900">
+        <div class="service-item d-flex">
+          <div class="icon"><i class="bi bi-chat-dots"></i></div>
+          <div>
+            <h4 class="title"><a href="ChatBoxDevServices.html">Chatbot Development</a></h4>
+            <p class="description">Smart, conversational AI that enhances support and engagement. We build bots that learn, adapt, and elevate the user experience.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-6" data-aos="fade-up" data-aos-delay="1000">
+        <div class="service-item d-flex">
+          <div class="icon"><i class="bi bi-cpu"></i></div>
+          <div>
+            <h4 class="title"><a href="AIDevelopmentService.html">AI Development</a></h4>
+            <p class="description">We specialize in building intelligent systems that can learn, adapt, and improve. From natural language processing to computer vision, we bring AI to life in real-world applications.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+</body>
+</html>
+
 
     <!-- Features Section -->
     <section id="features" class="features section">
@@ -398,7 +452,7 @@
 
             <div class="faq-container">
               <div class="faq-item faq-active">
-                <h3><span class="num">1.</span> <span>What services does Arya TechForce offer?</span></h3>
+                <h3><span class="num">1.</span> <span>What services does Aarya TechForce offer?</span></h3>
                 <div class="faq-content">
                   <p>We provide end-to-end IT solutions, including QA testing, automation, web and mobile app development, cloud solutions, and cybersecurity services..</p>
                 </div>
@@ -415,7 +469,7 @@
               </div><!-- End Faq item-->
 
               <div class="faq-item">
-                <h3><span class="num">3.</span> <span>Why should I choose Arya TechForce over other IT service providers?</span></h3>
+                <h3><span class="num">3.</span> <span>Why should I choose Aarya TechForce over other IT service providers?</span></h3>
                 <div class="faq-content">
                   <p>Our commitment to innovation, transparency, and customer satisfaction sets us apart. We combine cutting-edge technology with a customer-centric approach to deliver top-notch solutions.</p>
                 </div>
@@ -455,7 +509,7 @@
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
         <h2>Contact</h2>
-        <p>We’d love to hear from you! Whether you're looking to discuss a project, explore partnership opportunities, or have questions about our services, the Arya TechForce team is here to assist you.</p>
+        <p>We’d love to hear from you! Whether you're looking to discuss a project, explore partnership opportunities, or have questions about our services, the Aarya TechForce team is here to assist you.</p>
       </div><!-- End Section Title -->
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
@@ -469,7 +523,7 @@
                 <div class="info-item" data-aos="fade" data-aos-delay="200">
                   <i class="bi bi-geo-alt"></i>
                   <h3>Address</h3>
-                  <p>291 clerk colony, Indore, Madhya pradesh INDIA</p>
+                  <p>10, 19-C, MPSEDC IT Park, Electronic Complex, Pardesi Pura, Madhya Pradesh, India</p>
                   
                 </div>
               </div><!-- End Info Item -->
@@ -478,7 +532,7 @@
                 <div class="info-item" data-aos="fade" data-aos-delay="300">
                   <i class="bi bi-telephone"></i>
                   <h3>Call Us</h3>
-                  <p>+91-9111911946</p>
+                  <p>+91 9111911946</p>
                  
                 </div>
               </div><!-- End Info Item -->
@@ -487,7 +541,7 @@
                 <div class="info-item" data-aos="fade" data-aos-delay="400">
                   <i class="bi bi-envelope"></i>
                   <h3>Email Us</h3>
-                  <p>info@aryatechforce.com</p>
+                  <p>info@Aaryatechforce.com</p>
                   
                 </div>
               </div><!-- End Info Item -->
@@ -508,34 +562,35 @@
           <div class="col-lg-6">
             <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
               <div class="row gy-4">
-
+          
                 <div class="col-md-6">
-                  <input type="text" name="name" class="form-control" placeholder="Your Name" required="">
+                  <input type="text" name="name" class="form-control" placeholder="Your Name" required>
                 </div>
-
-                <div class="col-md-6 ">
-                  <input type="email" class="form-control" name="email" placeholder="Your Email" required="">
+          
+                <div class="col-md-6">
+                  <input type="email" class="form-control" name="email" placeholder="Your Email" required>
                 </div>
-
+          
                 <div class="col-12">
-                  <input type="text" class="form-control" name="subject" placeholder="Subject" required="">
+                  <input type="text" class="form-control" name="subject" placeholder="Subject" required>
                 </div>
-
+          
                 <div class="col-12">
-                  <textarea class="form-control" name="message" rows="6" placeholder="Message" required=""></textarea>
+                  <textarea class="form-control" name="message" rows="6" placeholder="Message" required></textarea>
                 </div>
-
+          
                 <div class="col-12 text-center">
-                  <div class="loading">Loading</div>
-                  <div class="error-message"></div>
-                  <div class="sent-message">Your message has been sent. Thank you!</div>
-
+                  <div class="loading" style="display:none;">Loading...</div>
+                  <div class="error-message text-danger"></div>
+                  <div class="sent-message text-success" style="display:none;">Your message has been sent. Thank you!</div>
+          
                   <button type="submit">Send Message</button>
                 </div>
-
+          
               </div>
             </form>
-          </div><!-- End Contact Form -->
+          </div>
+          
 
         </div>
 
@@ -548,10 +603,10 @@
   <footer id="footer" class="footer position-relative light-background">
 
     <div class="container footer-top">
-      <div class="row gy-4">
-        <div class="col-lg-5 col-md-12 footer-about">
+      <div class="row gy-4 justify-content-between">
+        <div class="col-lg-3 col-md-12 footer-about">
           <a href="index.html" class="logo d-flex align-items-center">
-            <span class="sitename">Arya TechForce</span>
+            <span class="sitename">Aarya TechForce</span>
           </a>
           
           <div class="social-links d-flex mt-4">
@@ -573,32 +628,45 @@
           </ul>
         </div>
 
+        <!-- Adding a second column for services -->
         <div class="col-lg-2 col-6 footer-links">
-          <h4>Our Services</h4>
+          <h4>Our Services (Part 1)</h4>
           <ul>
-            <li><a href="#">Web Design</a></li>
-            <li><a href="#">Web Development</a></li>
-            <li><a href="#">Business Growth & Value Addition</a></li>
-            <li><a href="#">Marketing</a></li>
-            <li><a href="#">Client Collaboration & Support</a></li>
-            
+            <li><a href="DevopsService.html">DevOps & Cloud</a></li>
+            <li><a href="WebService.html">Web Development</a></li>
+            <li><a href="QA-testing-services.html">QA & Testing</a></li>
+            <li><a href="MobileDevelopmentService.html">Mobile Development</a></li>
+            <li><a href="BlockChainService.html">Blockchain Development</a></li>
           </ul>
         </div>
 
-        <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
-          <h4>Contact Us</h4>
-          <p>A108 Adam Street</p>
-          <p>New York, NY 535022</p>
-          <p>United States</p>
-          <p class="mt-4"><strong>Phone:</strong> <span>+1 5589 55488 55</span></p>
-          <p><strong>Email:</strong> <span>info@example.com</span></p>
+        <div class="col-lg-2 col-6 footer-links">
+          <h4>Our Services (Part 2)</h4>
+          <ul>
+            <li><a href="UIUX.html">UI/UX Design</a></li>
+            <li><a href="BackendServices.html">Backend Development</a></li>
+            <li><a href="DesktopAppService.html">Desktop App Development</a></li>
+            <li><a href="ChatBoxDevServices.html">Chatbot Development</a></li>
+            <li><a href="AIDevelopmentService.html">AI Development</a></li>
+          </ul>
         </div>
 
+        <!-- Contact Us section on the same line -->
+        <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
+          <h4>Contact Us</h4>
+          <p>210, 19-C, MPSEDC IT Park, Electronic Complex,Pardesi Pura</p>
+          <p>Indore,  452011</p>
+          <p>INDIA</p>
+          <p class="mt-4"><strong>Phone:</strong> <span>+91 9111911946</span></p>
+          <p><strong>Email:</strong> <span>info@example.com</span></p>
+        </div>
       </div>
     </div>
 
+</footer>
 
-  </footer>
+210, 19-A, MPSEDC IT Park, Electronic Complex,Pardesi Pura,Indore, Madhya Pradesh
+
 
   <!-- Scroll Top -->
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
@@ -618,6 +686,11 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+  <footer id="footer" class="footer">
+    <div class="container text-center">
+      <p>&copy; <span>Copyright</span> <strong class="sitename">Aarya TechForce</strong>. All Rights Reserved</p>
+    </div>
+  </footer>
 
 </body>
 

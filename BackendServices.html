@@ -6,6 +6,103 @@
   <title>Backend Development Services</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <section id="blockchain-services" class="py-5 bg-dark text-white position-relative">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-12 text-center mb-5">
+          <!-- Heading -->
+          <h1 class="display-4 fw-bold animated-text mb-4">Blockchain Solutions by Aarya TechForce</h1>
+          
+          <!-- Subheading -->
+          <p class="lead text-muted mb-4">
+            Unlock decentralized possibilities with enterprise-grade blockchain development that powers the future of business.
+          </p>
+          
+          <!-- CTA Button -->
+          <a href="#services" class="btn btn-primary btn-lg text-dark rounded-pill px-4 py-2 shadow-lg hover-btn">Explore Our Services</a>
+        </div>
+      </div>
+      
+      <!-- Decorative Floating Circle (Blockchain Element) -->
+      <div class="floating-circle position-absolute"></div>
+    </div>
+  </section>
+  
+  <style>
+    /* General Section Styles */
+    #blockchain-services {
+      background: linear-gradient(45deg, #0d47a1, #00bcd4);
+      color: white;
+      position: relative;
+    }
+  
+    /* Animated Heading */
+    .animated-text {
+      animation: fadeInUp 1.5s ease-out;
+    }
+  
+    @keyframes fadeInUp {
+      0% { opacity: 0; transform: translateY(20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+  
+    /* Subheading Styles */
+    #blockchain-services p {
+      font-size: 1.2rem;
+      font-weight: 300;
+      color: rgba(255, 255, 255, 0.7);
+    }
+  
+    /* CTA Button Hover Effect */
+    .hover-btn {
+      background: #00bcd4;
+      transition: background 0.3s ease, transform 0.3s ease;
+    }
+  
+    .hover-btn:hover {
+      background: #007bff;
+      transform: translateY(-5px);
+      box-shadow: 0 8px 15px rgba(0, 123, 255, 0.4);
+    }
+  
+    /* Floating Circle Decoration */
+    .floating-circle {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      background-color: rgba(0, 188, 212, 0.2);
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      animation: float 3s ease-in-out infinite;
+    }
+  
+    @keyframes float {
+      0% {
+        transform: translate(-50%, -50%) scale(1);
+      }
+      50% {
+        transform: translate(-50%, -50%) scale(1.1);
+      }
+      100% {
+        transform: translate(-50%, -50%) scale(1);
+      }
+    }
+  
+    /* Media Query for Smaller Screens */
+    @media (max-width: 768px) {
+      #blockchain-services h1 {
+        font-size: 2.5rem;
+      }
+  
+      #blockchain-services p {
+        font-size: 1rem;
+      }
+    }
+  </style>
+  
+  
   <style>
     body {
       font-family: 'Segoe UI', sans-serif;
@@ -57,10 +154,10 @@
 
 
       <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
-        <img src="assets/img/backend-development.jpg" alt="Backend Development Image" class="img-fluid rounded mb-4">
+        
         <h3 class="text-dark mb-3">Backend Development That Powers Your Digital Core</h3>
         <p>We specialize in designing, developing, and maintaining the backbone of your applications—backend systems that are secure, scalable, and high-performing. Our expert engineers build robust server-side logic, APIs, databases, and integration systems that meet the most demanding enterprise needs.</p>
-
+        <img src="assets/img/BackendDevelopmentHeader.avif" alt="Backend Development Image" class="img-fluid rounded mb-4">
         <ul class="list-unstyled mb-4">
           <li><i class="bi bi-check-circle text-primary me-2"></i>Custom API Development & Integration</li>
           <li><i class="bi bi-check-circle text-primary me-2"></i>Microservices Architecture</li>
@@ -95,7 +192,7 @@
         </div>
 
         <div class="mt-4">
-          <p>With years of experience in building scalable architectures and seamless backend solutions, Arya TechForce is your trusted partner to power enterprise-grade applications. Let's architect the backbone of your digital journey together.</p>
+          <p>With years of experience in building scalable architectures and seamless backend solutions, Aarya TechForce is your trusted partner to power enterprise-grade applications. Let's architect the backbone of your digital journey together.</p>
         </div>
 
       </div>
@@ -104,6 +201,10 @@
   </div>
 </section>
 <!-- /Backend Development Services Page -->
-
+<footer id="footer" class="footer">
+  <div class="container text-center">
+    <p>&copy; <span>Copyright</span> <strong class="sitename">Aarya TechForce</strong>. All Rights Reserved</p>
+  </div>
+</footer>
 </body>
 </html>

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Desktop Application Development</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+
+  <section id="desktop-app-development" class="py-5 bg-dark text-white position-relative">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-12 text-center mb-5">
+          <!-- Heading -->
+          <h1 class="display-4 fw-bold animated-text mb-4">Desktop Application Development by Aarya TechForce</h1>
+          
+          <!-- Subheading -->
+          <p class="lead text-muted mb-4">
+            Building high-performance desktop applications tailored to your business needs for seamless user experiences.
+          </p>
+          
+          <!-- CTA Button -->
+          <a href="#services" class="btn btn-success btn-lg text-dark rounded-pill px-4 py-2 shadow-lg hover-btn">Explore Our Solutions</a>
+        </div>
+      </div>
+      
+      <!-- Decorative Floating Square -->
+      <div class="floating-square position-absolute"></div>
+    </div>
+  </section>
+  
+  <style>
+    /* General Section Styles */
+    #desktop-app-development {
+      background: linear-gradient(45deg, #2d3436, #00b894);
+      color: white;
+      position: relative;
+    }
+  
+    /* Animated Heading */
+    .animated-text {
+      animation: fadeInUp 1.5s ease-out;
+    }
+  
+    @keyframes fadeInUp {
+      0% { opacity: 0; transform: translateY(20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+  
+    /* Subheading Styles */
+    #desktop-app-development p {
+      font-size: 1.2rem;
+      font-weight: 300;
+      color: rgba(255, 255, 255, 0.7);
+    }
+  
+    /* CTA Button Hover Effect */
+    .hover-btn {
+      background: #00b894;
+      transition: background 0.3s ease, transform 0.3s ease;
+    }
+  
+    .hover-btn:hover {
+      background: #27ae60;
+      transform: translateY(-5px);
+      box-shadow: 0 8px 15px rgba(39, 174, 96, 0.4);
+    }
+  
+    /* Floating Square Decoration */
+    .floating-square {
+      width: 120px;
+      height: 120px;
+      background-color: rgba(0, 184, 148, 0.2);
+      position: absolute;
+      top: 60%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      animation: float 3s ease-in-out infinite;
+    }
+  
+    @keyframes float {
+      0% {
+        transform: translate(-50%, -50%) scale(1);
+      }
+      50% {
+        transform: translate(-50%, -50%) scale(1.1);
+      }
+      100% {
+        transform: translate(-50%, -50%) scale(1);
+      }
+    }
+  
+    /* Media Query for Smaller Screens */
+    @media (max-width: 768px) {
+      #desktop-app-development h1 {
+        font-size: 2.5rem;
+      }
+  
+      #desktop-app-development p {
+        font-size: 1rem;
+      }
+    }
+  </style>
+  
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #f1f1f1, #ffffff);
+      color: #333;
+    }
+    .section {
+      padding: 80px 0;
+    }
+    h3, h5 {
+      font-weight: 700;
+    }
+    .rounded-box {
+      transition: all 0.3s ease;
+    }
+    .rounded-box:hover {
+      background-color: #0d6efd;
+      color: #fff;
+    }
+    .tech-box {
+      padding: 20px;
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+      transition: transform 0.3s;
+      text-align: center;
+      font-weight: 600;
+    }
+    .tech-box:hover {
+      transform: translateY(-5px);
+      background-color: #0d6efd;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Desktop Application Development Page -->
+<section id="desktop-development" class="section">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-10">
+        <img src="assets/img/desktopApplicationHeader.avif" alt="Desktop Application Development" class="img-fluid rounded mb-4 w-100">
+        <h3 class="text-dark mb-4">Custom Desktop Applications That Power Productivity & Precision</h3>
+        <p>At Aarya TechForce, we develop robust, high-performance desktop applications tailored to your business needs. From enterprise-level systems to lightweight standalone tools, our apps run seamlessly across Windows, macOS, and Linux. Our end-to-end development services ensure precision architecture, speed, and security.</p>
+
+        <ul class="list-unstyled my-4">
+          <li><i class="bi bi-check-circle-fill text-primary me-2"></i> Cross-platform desktop software (Windows, macOS, Linux)</li>
+          <li><i class="bi bi-check-circle-fill text-primary me-2"></i> Feature-rich and hardware-integrated applications</li>
+          <li><i class="bi bi-check-circle-fill text-primary me-2"></i> Offline-first capability with seamless cloud sync</li>
+          <li><i class="bi bi-check-circle-fill text-primary me-2"></i> Real-time analytics dashboards and admin panels</li>
+          <li><i class="bi bi-check-circle-fill text-primary me-2"></i> Integration with legacy and modern systems</li>
+          <li><i class="bi bi-check-circle-fill text-primary me-2"></i> Post-deployment support and scalability upgrades</li>
+        </ul>
+
+        <h5 class="text-primary mt-5">Technologies & Frameworks</h5>
+        <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 g-4 mt-3">
+          <div class="col"><div class="tech-box">Electron.js</div></div>
+          <div class="col"><div class="tech-box">WPF</div></div>
+          <div class="col"><div class="tech-box">WinForms</div></div>
+          <div class="col"><div class="tech-box">.NET</div></div>
+          <div class="col"><div class="tech-box">JavaFX</div></div>
+          <div class="col"><div class="tech-box">Qt</div></div>
+          <div class="col"><div class="tech-box">GTK</div></div>
+          <div class="col"><div class="tech-box">Tkinter</div></div>
+          <div class="col"><div class="tech-box">PyQt</div></div>
+          <div class="col"><div class="tech-box">C++</div></div>
+          <div class="col"><div class="tech-box">Xamarin</div></div>
+          <div class="col"><div class="tech-box">UWP</div></div>
+          <div class="col"><div class="tech-box">Delphi</div></div>
+          <div class="col"><div class="tech-box">Rust</div></div>
+          <div class="col"><div class="tech-box">Swing</div></div>
+          <div class="col"><div class="tech-box">Tauri</div></div>
+        </div>
+
+        <div class="mt-5">
+          <p>No matter the industry or complexity, we bring your desktop ideas to life with flawless execution and modern design. Partner with Aarya TechForce to deliver powerful desktop experiences that elevate your business operations.</p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+<!-- /Desktop Application Development Page -->
+<footer id="footer" class="footer">
+  <div class="container text-center">
+    <p>&copy; <span>Copyright</span> <strong class="sitename">Aarya TechForce</strong>. All Rights Reserved</p>
+  </div>
+</footer>
+</body>
+</html>
