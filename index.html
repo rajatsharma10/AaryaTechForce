@@ -35,7 +35,70 @@
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
 </head>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const form = document.querySelector('.php-email-form');
 
+  if (form) {
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      // Hide all messages before submission
+      const loading = form.querySelector('.loading');
+      const error = form.querySelector('.error-message');
+      const success = form.querySelector('.sent-message');
+
+      // Reset all messages and hide them initially
+      loading.style.display = 'none';
+      error.style.display = 'none';
+      success.style.display = 'none';
+
+      loading.style.display = 'block';  // Show loading spinner
+
+      // Create FormData from the form
+      const formData = new FormData(form);
+
+      // Send the data via fetch
+      fetch(form.action, {
+        method: 'POST',
+        body: formData
+      })
+      .then(response => {
+        loading.style.display = 'none';  // Hide loading spinner
+
+        // Check if the response is successful
+        if (response.ok) {
+          return response.text();  // Success
+        } else {
+          throw new Error('Failed to send message');
+        }
+      })
+      .then(data => {
+        // If the response text is 'OK', show the success message
+        if (data.trim() === "Message sent successfully.") {
+          success.style.display = 'block';
+          success.innerHTML = "Your message has been sent. Thank you!";
+          form.reset();  // Reset the form
+        } else {
+          throw new Error("Unexpected response");
+        }
+      })
+      .catch(err => {
+        // Show error message if there is an issue
+        error.style.display = 'block';
+        error.innerHTML = "Oops! Try again later.";
+      });
+    });
+  } else {
+    console.warn("Form element not found!");
+  }
+});
+
+
+  </script>
+  
+  
+  
 <body class="index-page">
 
   <header id="header" class="header d-flex align-items-center fixed-top">
@@ -77,7 +140,7 @@
         <div class="row">
           <div class="col-lg-10">
             <h2 data-aos="fade-up" data-aos-delay="100">Welcome to Aarya TechForce</h2><span>.</span>
-            <p data-aos="fade-up" data-aos-delay="200">We are a leading IT services company committed to providing expert solutions that guarantee your software products are reliable, efficient, and fully functional. Our team of experienced software testers and IT professionals excels at identifying and resolving bugs, enhancing performance, and ensuring your software aligns with your business objectives. With our meticulous approach and advanced testing methodologies, we help transform your software into a robust, high-performing asset that meets all industry standards and user expectations.</p>
+            <p data-aos="fade-up" data-aos-delay="200">At Aarya TechForce, we don't just build software—we build trust. As a premier IT solutions company, our mission is clear: <strong>INNOVATE . DEVELOP . ELEVATE</strong>.  committed to providing expert solutions that guarantee your software products are reliable, efficient, and fully functional. Our team of experienced software testers and IT professionals excels at identifying and resolving bugs, enhancing performance, and ensuring your software aligns with your business objectives. With our meticulous approach and advanced testing methodologies, we help transform your software into a robust, high-performing asset that meets all industry standards and user expectations.</p>
           </div>
           
         </div>
@@ -205,14 +268,14 @@
 
           <div class="col-lg-3 col-md-6">
             <div class="stats-item text-center w-100 h-100">
-              <span data-purecounter-start="0" data-purecounter-end="232" data-purecounter-duration="1" class="purecounter"></span>
+              <span data-purecounter-start="0" data-purecounter-end="10" data-purecounter-duration="1" class="purecounter"></span>
               <p>Clients</p>
             </div>
           </div><!-- End Stats Item -->
 
           <div class="col-lg-3 col-md-6">
             <div class="stats-item text-center w-100 h-100">
-              <span data-purecounter-start="0" data-purecounter-end="521" data-purecounter-duration="1" class="purecounter"></span>
+              <span data-purecounter-start="0" data-purecounter-end="15" data-purecounter-duration="1" class="purecounter"></span>
               <p>Projects</p>
             </div>
           </div><!-- End Stats Item -->
@@ -226,7 +289,7 @@
 
           <div class="col-lg-3 col-md-6">
             <div class="stats-item text-center w-100 h-100">
-              <span data-purecounter-start="0" data-purecounter-end="32" data-purecounter-duration="1" class="purecounter"></span>
+              <span data-purecounter-start="0" data-purecounter-end="47" data-purecounter-duration="1" class="purecounter"></span>
               <p>Workers</p>
             </div>
           </div><!-- End Stats Item -->
@@ -298,117 +361,118 @@
   </style>
 </head>
 <body>
-
-<section id="services" class="section">
-  <div class="container section-title">
-    <h2>Our Services</h2>
-  </div>
-
-  <div class="container">
-    <div class="row gy-4">
-      <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-        <div class="service-item d-flex">
-          <div class="icon"><i class="bi bi-cloud"></i></div>
-          <div>
-            <h4 class="title"><a href="DevopsService.html">DevOps & Cloud</a></h4>
-            <p class="description">Accelerate your digital transformation with agile deployments, automated pipelines, and scalable cloud infrastructure—built for reliability and innovation at scale.</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
-        <div class="service-item d-flex">
-          <div class="icon"><i class="bi bi-globe"></i></div>
-          <div>
-            <h4 class="title"><a href="WebService.html">Web Development</a></h4>
-            <p class="description">Designing modern, responsive websites that convert—your digital presence crafted for impact, performance, and seamless interaction.</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
-        <div class="service-item d-flex">
-          <div class="icon"><i class="bi bi-bug"></i></div>
-          <div>
-            <h4 class="title"><a href="QA-testing-services.html">QA & Testing</a></h4>
-            <p class="description">From automation to manual testing, we ensure flawless performance and bug-free launches with meticulous quality assurance at every development stage.</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-lg-6" data-aos="fade-up" data-aos-delay="400">
-        <div class="service-item d-flex">
-          <div class="icon"><i class="bi bi-phone"></i></div>
-          <div>
-            <h4 class="title"><a href="MobileDevelopmentService.html">Mobile Development</a></h4>
-            <p class="description">Bring your brand to life on the go. We build intuitive, high-performance mobile apps that deliver exceptional user experiences across all devices.</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-lg-6" data-aos="fade-up" data-aos-delay="500">
-        <div class="service-item d-flex">
-          <div class="icon"><i class="bi bi-link-45deg"></i></div>
-          <div>
-            <h4 class="title"><a href="BlockChainService.html">Blockchain Development</a></h4>
-            <p class="description">Empowering trust and security through decentralized solutions. We develop blockchain-powered systems for finance, supply chain, and beyond.</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-lg-6" data-aos="fade-up" data-aos-delay="600">
-        <div class="service-item d-flex">
-          <div class="icon"><i class="bi bi-vector-pen"></i></div>
-          <div>
-            <h4 class="title"><a href="UIUX.html">UI/UX Design</a></h4>
-            <p class="description">Human-centered design that’s both beautiful and functional. We turn user journeys into visual experiences that delight and convert.</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-lg-6" data-aos="fade-up" data-aos-delay="700">
-        <div class="service-item d-flex">
-          <div class="icon"><i class="bi bi-hdd"></i></div>
-          <div>
-            <h4 class="title"><a href="BackendServices.html">Backend Development</a></h4>
-            <p class="description">Powering your applications with secure, scalable, and optimized backend architectures—crafted to handle complexity with ease.</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-lg-6" data-aos="fade-up" data-aos-delay="800">
-        <div class="service-item d-flex">
-          <div class="icon"><i class="bi bi-display"></i></div>
-          <div>
-            <h4 class="title"><a href="DesktopAppService.html">Desktop App Development</a></h4>
-            <p class="description">Delivering feature-rich desktop applications for Windows, macOS, and Linux—blending performance with elegant usability.</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-lg-6" data-aos="fade-up" data-aos-delay="900">
-        <div class="service-item d-flex">
-          <div class="icon"><i class="bi bi-chat-dots"></i></div>
-          <div>
-            <h4 class="title"><a href="ChatBoxDevServices.html">Chatbot Development</a></h4>
-            <p class="description">Smart, conversational AI that enhances support and engagement. We build bots that learn, adapt, and elevate the user experience.</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-lg-6" data-aos="fade-up" data-aos-delay="1000">
-        <div class="service-item d-flex">
-          <div class="icon"><i class="bi bi-cpu"></i></div>
-          <div>
-            <h4 class="title"><a href="AIDevelopmentService.html">AI Development</a></h4>
-            <p class="description">We specialize in building intelligent systems that can learn, adapt, and improve. From natural language processing to computer vision, we bring AI to life in real-world applications.</p>
-          </div>
-        </div>
-      </div>
-
+  <section id="services" class="section">
+    <div class="container section-title">
+      <h2>Our Services</h2>
     </div>
-  </div>
-</section>
+  
+    <div class="container">
+      <div class="row gy-4">
+  
+        <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+          <a href="DevopsService.html" class="service-item d-flex text-decoration-none text-reset">
+            <div class="icon"><i class="bi bi-cloud"></i></div>
+            <div>
+              <h4 class="title">DevOps & Cloud</h4>
+              <p class="description">Accelerate your digital transformation with agile deployments, automated pipelines, and scalable cloud infrastructure—built for reliability and innovation at scale.</p>
+            </div>
+          </a>
+        </div>
+  
+        <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+          <a href="WebService.html" class="service-item d-flex text-decoration-none text-reset">
+            <div class="icon"><i class="bi bi-globe"></i></div>
+            <div>
+              <h4 class="title">Web Development</h4>
+              <p class="description">Designing modern, responsive websites that convert—your digital presence crafted for impact, performance, and seamless interaction.</p>
+            </div>
+          </a>
+        </div>
+  
+        <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
+          <a href="QA-testing-services.html" class="service-item d-flex text-decoration-none text-reset">
+            <div class="icon"><i class="bi bi-bug"></i></div>
+            <div>
+              <h4 class="title">QA & Testing</h4>
+              <p class="description">From automation to manual testing, we ensure flawless performance and bug-free launches with meticulous quality assurance at every development stage.</p>
+            </div>
+          </a>
+        </div>
+  
+        <div class="col-lg-6" data-aos="fade-up" data-aos-delay="400">
+          <a href="MobileDevelopmentService.html" class="service-item d-flex text-decoration-none text-reset">
+            <div class="icon"><i class="bi bi-phone"></i></div>
+            <div>
+              <h4 class="title">Mobile Development</h4>
+              <p class="description">Bring your brand to life on the go. We build intuitive, high-performance mobile apps that deliver exceptional user experiences across all devices.</p>
+            </div>
+          </a>
+        </div>
+  
+        <div class="col-lg-6" data-aos="fade-up" data-aos-delay="500">
+          <a href="BlockChainService.html" class="service-item d-flex text-decoration-none text-reset">
+            <div class="icon"><i class="bi bi-link-45deg"></i></div>
+            <div>
+              <h4 class="title">Blockchain Development</h4>
+              <p class="description">Empowering trust and security through decentralized solutions. We develop blockchain-powered systems for finance, supply chain, and beyond.</p>
+            </div>
+          </a>
+        </div>
+  
+        <div class="col-lg-6" data-aos="fade-up" data-aos-delay="600">
+          <a href="UIUX.html" class="service-item d-flex text-decoration-none text-reset">
+            <div class="icon"><i class="bi bi-vector-pen"></i></div>
+            <div>
+              <h4 class="title">UI/UX Design</h4>
+              <p class="description">Human-centered design that’s both beautiful and functional. We turn user journeys into visual experiences that delight and convert.</p>
+            </div>
+          </a>
+        </div>
+  
+        <div class="col-lg-6" data-aos="fade-up" data-aos-delay="700">
+          <a href="BackendServices.html" class="service-item d-flex text-decoration-none text-reset">
+            <div class="icon"><i class="bi bi-hdd"></i></div>
+            <div>
+              <h4 class="title">Backend Development</h4>
+              <p class="description">Powering your applications with secure, scalable, and optimized backend architectures—crafted to handle complexity with ease.</p>
+            </div>
+          </a>
+        </div>
+  
+        <div class="col-lg-6" data-aos="fade-up" data-aos-delay="800">
+          <a href="DesktopAppService.html" class="service-item d-flex text-decoration-none text-reset">
+            <div class="icon"><i class="bi bi-display"></i></div>
+            <div>
+              <h4 class="title">Desktop App Development</h4>
+              <p class="description">Delivering feature-rich desktop applications for Windows, macOS, and Linux—blending performance with elegant usability.</p>
+            </div>
+          </a>
+        </div>
+  
+        <div class="col-lg-6" data-aos="fade-up" data-aos-delay="900">
+          <a href="ChatBoxDevServices.html" class="service-item d-flex text-decoration-none text-reset">
+            <div class="icon"><i class="bi bi-chat-dots"></i></div>
+            <div>
+              <h4 class="title">Chatbot Development</h4>
+              <p class="description">Smart, conversational AI that enhances support and engagement. We build bots that learn, adapt, and elevate the user experience.</p>
+            </div>
+          </a>
+        </div>
+  
+        <div class="col-lg-6" data-aos="fade-up" data-aos-delay="1000">
+          <a href="AIDevelopmentService.html" class="service-item d-flex text-decoration-none text-reset">
+            <div class="icon"><i class="bi bi-cpu"></i></div>
+            <div>
+              <h4 class="title">AI Development</h4>
+              <p class="description">We specialize in building intelligent systems that can learn, adapt, and improve. From natural language processing to computer vision, we bring AI to life in real-world applications.</p>
+            </div>
+          </a>
+        </div>
+  
+      </div>
+    </div>
+  </section>
+  
 
 </body>
 </html>

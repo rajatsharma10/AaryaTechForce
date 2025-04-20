@@ -24,40 +24,39 @@
   
   <style>
     #devops-cloud-services {
-  background: linear-gradient(to right, #00c6ff, #0072ff); /* Gradient background */
-  color: white;
-  padding-top: 5rem;
-  padding-bottom: 5rem;
-}
+      background: linear-gradient(to right, #00c6ff, #0072ff); /* Gradient background */
+      color: white;
+      padding-top: 5rem;
+      padding-bottom: 5rem;
+    }
 
-#devops-cloud-services .display-4 {
-  font-weight: 700;
-  font-size: 3.5rem;
-}
+    #devops-cloud-services .display-4 {
+      font-weight: 700;
+      font-size: 3.5rem;
+    }
 
-#devops-cloud-services .lead {
-  font-size: 1.25rem;
-  opacity: 0.8;
-}
+    #devops-cloud-services .lead {
+      font-size: 1.25rem;
+      opacity: 0.8;
+    }
 
-#devops-cloud-services .btn-outline-light {
-  border-color: white;
-  color: white;
-  padding: 10px 20px;
-  font-size: 1rem;
-}
+    #devops-cloud-services .btn-outline-light {
+      border-color: white;
+      color: white;
+      padding: 10px 20px;
+      font-size: 1rem;
+    }
 
-#devops-cloud-services .btn-outline-light:hover {
-  background-color: white;
-  color: #0072ff;
-}
+    #devops-cloud-services .btn-outline-light:hover {
+      background-color: white;
+      color: #0072ff;
+    }
 
-#blockchain-services {
-  background-color: #f4f4f4;
-  padding-top: 4rem;
-  padding-bottom: 4rem;
-}
-
+    #blockchain-services {
+      background-color: #f4f4f4;
+      padding-top: 4rem;
+      padding-bottom: 4rem;
+    }
 
     .service-header {
       background: #f1f1f1;
@@ -81,10 +80,17 @@
     .highlight {
       color: #007bff;
     }
+
+    /* Disable text selection */
+    body {
+      -webkit-user-select: none; /* Chrome/Safari */
+      -moz-user-select: none; /* Firefox */
+      -ms-user-select: none; /* Internet Explorer/Edge */
+      user-select: none; /* Non-prefixed version */
+    }
   </style>
 </head>
 <body>
-
 
 <section class="py-5">
   <div class="container">
@@ -123,6 +129,39 @@
     <p>&copy; <span>Copyright</span> <strong class="sitename">Aarya TechForce</strong>. All Rights Reserved</p>
   </div>
 </footer>
+
+<!-- Script to disable copy, right-click, and shortcuts -->
+<script>
+  // Disable right-click context menu
+  document.addEventListener('contextmenu', function (e) {
+    e.preventDefault();  // Disable right-click
+  });
+
+  // Disable copy, cut, and paste actions
+  document.addEventListener('copy', function (e) {
+    e.preventDefault();  // Disable copy
+  });
+
+  document.addEventListener('cut', function (e) {
+    e.preventDefault();  // Disable cut
+  });
+
+  document.addEventListener('paste', function (e) {
+    e.preventDefault();  // Disable paste
+  });
+
+  // Disable Ctrl+C, Ctrl+X, Ctrl+V
+  document.addEventListener('keydown', function (e) {
+    if (e.ctrlKey && (e.key === 'c' || e.key === 'x' || e.key === 'v')) {
+      e.preventDefault(); // Block Ctrl+C, Ctrl+X, Ctrl+V
+    }
+  });
+
+  // Disable text selection
+  document.addEventListener('selectstart', function (e) {
+    e.preventDefault();  // Prevent text selection
+  });
+</script>
 
 </body>
 </html>

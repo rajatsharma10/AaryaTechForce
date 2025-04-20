@@ -1,30 +1,43 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-  $name = strip_tags(trim($_POST["name"]));
-  $email = filter_var(trim($_POST["email"]), FILTER_SANITIZE_EMAIL);
-  $subject = strip_tags(trim($_POST["subject"]));
-  $message = trim($_POST["message"]);
+    $name = strip_tags(trim($_POST["name"]));
+    $email = filter_var(trim($_POST["email"]), FILTER_SANITIZE_EMAIL);
+    $subject = strip_tags(trim($_POST["subject"]));
+    $message = trim($_POST["message"]);
 
-  $to = "rajat@aaryatechforce.com"; // ✅ your actual email
+    // Validate required fields
+    if (empty($name) || empty($email) || empty($subject) || empty($message)) {
+        http_response_code(400); // Bad Request if fields are missing
+        echo "All fields are required.";
+        exit;
+    }
 
-  $email_subject = "New Contact Form Message: $subject";
-  $email_content = "You have received a new message from your website contact form.\n\n";
-  $email_content .= "Name: $name\n";
-  $email_content .= "Email: $email\n\n";
-  $email_content .= "Message:\n$message\n";
+    // Validate email format
+    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        http_response_code(400); // Bad Request for invalid email
+        echo "Invalid email format.";
+        exit;
+    }
 
-  $email_headers = "From: $name <$email>\r\n";
-  $email_headers .= "Reply-To: $email\r\n";
+    // Send email
+    $to = "rajat@aaryatechforce.com";  // Your real email
+    $email_subject = "New Message: $subject";
+    $email_body = "Name: $name\n";
+    $email_body .= "Email: $email\n";
+    $email_body .= "Message:\n$message\n";
 
-  if (mail($to, $email_subject, $email_content, $email_headers)) {
-    http_response_code(200);
-    echo "Your message has been sent. Thank you!";
-  } else {
-    http_response_code(500);
-    echo "Oops! Something went wrong and we couldn't send your message.";
-  }
+    $headers = "From: $name <$email>\r\n";
+    $headers .= "Reply-To: $email\r\n";
+
+    if (mail($to, $email_subject, $email_body, $headers)) {
+        http_response_code(200);  // Success
+        echo "Message sent successfully.";  // Return success message
+    } else {
+        http_response_code(500);  // Failure
+        echo "Failed to send the message.";  // Return failure message
+    }
 } else {
-  http_response_code(403);
-  echo "There was a problem with your submission. Please try again.";
+    http_response_code(403);  // Forbidden for direct access
+    echo "Direct access not allowed.";
 }
 ?>
