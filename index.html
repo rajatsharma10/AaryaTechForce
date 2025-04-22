@@ -35,6 +35,14 @@
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
 </head>
+<script>
+  // Disable right-click
+  document.addEventListener('contextmenu', event => event.preventDefault());
+
+  // Disable text selection
+  document.addEventListener('selectstart', event => event.preventDefault());
+</script>
+
 <style>
   .info-item {
     background-color: #ffffff;
@@ -675,7 +683,7 @@ document.addEventListener("DOMContentLoaded", function () {
           
                 <div class="col-12 text-center">
                   <div class="loading" style="display:none;">Loading...</div>
-                  <div class="error-message text-danger"></div>
+                  <div class="error-message text-danger" style="display:none;"></div>
                   <div class="sent-message text-success" style="display:none;">Your message has been sent. Thank you!</div>
           
                   <button type="submit">Send Message</button>
@@ -684,6 +692,7 @@ document.addEventListener("DOMContentLoaded", function () {
               </div>
             </form>
           </div>
+          
           
 
         </div>

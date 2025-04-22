@@ -1,8 +1,3 @@
-/**
- * PHP Email Form Validation - v3.9
- * URL: https://bootstrapmade.com/php-email-form/
- * Author: BootstrapMade.com
- */
 (function () {
   "use strict";
 
@@ -16,20 +11,18 @@
 
       let action = thisForm.getAttribute('action');
       let recaptcha = thisForm.getAttribute('data-recaptcha-site-key');
-      
+
       if (!action) {
         displayError(thisForm, 'The form action property is not set!');
         return;
       }
 
-      // Show loading, hide other messages
-      thisForm.querySelector('.loading').classList.add('d-block');
-      thisForm.querySelector('.error-message').classList.remove('d-block');
-      thisForm.querySelector('.sent-message').classList.remove('d-block');
+      thisForm.querySelector('.loading').style.display = 'block';
+      thisForm.querySelector('.error-message').style.display = 'none';
+      thisForm.querySelector('.sent-message').style.display = 'none';
 
       let formData = new FormData(thisForm);
 
-      // If reCaptcha exists, handle it
       if (recaptcha) {
         if (typeof grecaptcha !== "undefined") {
           grecaptcha.ready(function () {
@@ -66,10 +59,11 @@
         }
       })
       .then(data => {
-        thisForm.querySelector('.loading').classList.remove('d-block');
-        // Check if the server returns 'OK'
-        if (data.trim() === 'OK') {
-          thisForm.querySelector('.sent-message').classList.add('d-block');
+        thisForm.querySelector('.loading').style.display = 'none';
+
+        if (data.trim().toLowerCase().includes('success') || data.trim().toLowerCase() === 'ok') {
+          thisForm.querySelector('.sent-message').style.display = 'block';
+          thisForm.querySelector('.error-message').style.display = 'none';
           thisForm.reset();
         } else {
           throw new Error(data ? data : 'Form submission failed with no error message.');
@@ -81,9 +75,10 @@
   }
 
   function displayError(thisForm, error) {
-    thisForm.querySelector('.loading').classList.remove('d-block');
+    thisForm.querySelector('.loading').style.display = 'none';
+    thisForm.querySelector('.sent-message').style.display = 'none';
     thisForm.querySelector('.error-message').innerHTML = error;
-    thisForm.querySelector('.error-message').classList.add('d-block');
+    thisForm.querySelector('.error-message').style.display = 'block';
   }
 
 })();
