@@ -52,6 +52,7 @@
     <link href="assets/css/main.css" rel="stylesheet">
 
     <title>Arya TechForce</title>
+    
 </head>
 <body>
     <!-- Your website content goes here -->
@@ -102,7 +103,55 @@
     color: #555555;
     margin: 0;
   }
+ /* Running Text Bar inside Header */
+.running-text-bar {
+  width: 100%;
+  background-color: #222; /* Dark background */
+  color: #fff; /* White text */
+  padding: 5px 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 500;
+  z-index: 1000;
+}
+
+/* Move the main container down */
+.container-fluid {
+  margin-top: 35px; /* Adjust this value based on running text height */
+}
+
+/* Optional Animation for running text */
+.running-text {
+  display: inline-block;
+  white-space: nowrap;
+  animation: moveText 12s linear infinite;
+  padding: 0 20px;
+}
+
+@keyframes moveText {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* Your existing header */
+.header {
+  color: var(--default-color);
+  background-color: var(--background-color);
+  padding: 2px 10px;
+  transition: all 0.5s;
+  z-index: 997;
+  position: relative; /* Important */
+}
+
 </style>
+
 <script>
 document.addEventListener("DOMContentLoaded", function () {
   const form = document.querySelector('.php-email-form');
@@ -168,34 +217,43 @@ document.addEventListener("DOMContentLoaded", function () {
   
   
 <body class="index-page">
+ 
 
-  <header id="header" class="header d-flex align-items-center fixed-top">
-    <div class="container-fluid position-relative d-flex align-items-center justify-content-between">
+  <!-- Running Text Bar (Outside the Header) -->
 
-      <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
-        <!-- Uncomment the line below if you also wish to use an image logo -->
-        <img src="assets/img/logo.jpeg" alt="">
-        
-      </a>
 
-      <nav id="navmenu" class="navmenu">
-        <ul>
-          <li><a href="index.html#hero" class="active">Home</a></li>
-          <li><a href="index.html#about">About</a></li>
-          <li><a href="index.html#services">Services</a></li>
-          <li><a href="Portfolio.html">Portfolio / Projects </a></li>
-          <li><a href="Blog.html">Blog</a></li>
-          <li><a href="Carrers.html">Careers</a></li>
-     
-          <li><a href="index.html#contact">Contact</a></li>
-        </ul>
-        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-      </nav>
+<!-- Your Main Header -->
+<header id="header" class="header d-flex align-items-center fixed-top">
 
-      <a class="btn-getstarted" href="index.html#about">Get Started</a>
-
+  <div class="running-text-bar">
+    <div class="running-text">
+      Partner with Arya TechForce — Your Trusted Experts in QA Testing, Web Development, Mobile Apps, Cloud Services & DevOps. Empowering Your Business Growth with Cutting-Edge IT Solutions!
     </div>
-  </header>
+  </div>
+
+  <div class="container-fluid position-relative d-flex align-items-center justify-content-between">
+    
+    <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
+      <img src="assets/img/logo.jpeg" alt="">
+    </a>
+
+    <nav id="navmenu" class="navmenu">
+      <ul>
+        <li><a href="index.html#hero" class="active">Home</a></li>
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#services">Services</a></li>
+        <li><a href="Portfolio.html">Portfolio / Projects</a></li>
+        <li><a href="Blog.html">Blog</a></li>
+        <li><a href="Carrers.html">Careers</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+      <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+    </nav>
+
+    <a class="btn-getstarted" href="index.html#about">Get Started</a>
+
+  </div>
+</header>
 
   <main class="main">
 
