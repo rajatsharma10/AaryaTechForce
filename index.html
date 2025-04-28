@@ -213,6 +213,32 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
   </script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const dropdowns = document.querySelectorAll('.navmenu .dropdown');
+  
+      // Add event listener for each dropdown
+      dropdowns.forEach(dropdown => {
+        const dropdownToggle = dropdown.querySelector('a');
+  
+        // Toggle the dropdown on click
+        dropdownToggle.addEventListener('click', function(e) {
+          e.preventDefault(); // Prevent link from navigating
+          // Toggle active class
+          dropdown.classList.toggle('active');
+        });
+      });
+  
+      // Close dropdown if clicked outside
+      document.addEventListener('click', function(event) {
+        dropdowns.forEach(dropdown => {
+          if (!dropdown.contains(event.target) && dropdown.classList.contains('active')) {
+            dropdown.classList.remove('active');
+          }
+        });
+      });
+    });
+  </script>
   
   
   

@@ -363,7 +363,7 @@ h6 {
   }
 
   .navmenu ul {
-    display: none;
+    display: none; /* Ensure dropdown is hidden by default */
     list-style: none;
     position: absolute;
     inset: 60px 20px 20px 20px;
@@ -429,7 +429,7 @@ h6 {
 
   .navmenu .dropdown ul {
     position: static;
-    display: none;
+    display: none; /* Ensure dropdown is hidden */
     z-index: 99;
     padding: 10px 0;
     margin: 10px 20px;
@@ -444,8 +444,7 @@ h6 {
   }
 
   .navmenu .dropdown > .dropdown-active {
-    display: block;
-    background-color: rgba(33, 37, 41, 0.03);
+    display: none; /* Ensure dropdown is hidden */
   }
 
   .mobile-nav-active {
@@ -474,9 +473,38 @@ h6 {
     display: block;
   }
 
-  /* JavaScript for mobile menu toggle */
+  /* Dropdown Behavior */
+  .navmenu .dropdown.active > ul {
+    display: block; /* Only show dropdown when active */
+  }
 
+  .navmenu .dropdown > a {
+    cursor: pointer;
+  }
+
+  .navmenu .dropdown ul li {
+    padding: 10px 20px;
+  }
+
+  .navmenu .dropdown ul li a {
+    color: var(--nav-dropdown-color);
+    font-size: 15px;
+  }
+
+  .navmenu .dropdown ul li a:hover {
+    color: var(--nav-dropdown-hover-color);
+  }
+
+  .mobile-nav-active .navmenu ul {
+    display: block;
+  }
+
+  /* Add z-index to prevent overlap */
+  .navmenu ul, .mobile-nav-active .navmenu {
+    z-index: 9999;
+  }
 }
+
 
 /*--------------------------------------------------------------
 # Global Footer
