@@ -241,7 +241,23 @@ document.addEventListener("DOMContentLoaded", function () {
       <ul>
         <li><a href="index.html#hero" class="active">Home</a></li>
         <li><a href="index.html#about">About</a></li>
-        <li><a href="index.html#services">Services</a></li>
+    
+        <li class="dropdown">
+          <a href="#"><span>Services</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+          <ul>
+            <li><a href="DevopsService.html">DevOps & Cloud</a></li>
+            <li><a href="WebService.html">Web Development</a></li>
+            <li><a href="QA-testing-services.html">QA & Testing</a></li>
+            <li><a href="MobileDevelopmentService.html">Mobile Development</a></li>
+            <li><a href="BlockChainService.html">Blockchain Development</a></li>
+            <li><a href="UIUX.html">UI/UX Design</a></li>
+            <li><a href="BackendServices.html">Backend Development</a></li>
+            <li><a href="DesktopAppService.html">Desktop App Development</a></li>
+            <li><a href="ChatBoxDevServices.html">Chatbot Development</a></li>
+            <li><a href="AIDevelopmentService.html">AI Development</a></li>
+          </ul>
+        </li>
+    
         <li><a href="Portfolio.html">Portfolio / Projects</a></li>
         <li><a href="Blog.html">Blog</a></li>
         <li><a href="Carrers.html">Careers</a></li>
@@ -249,6 +265,7 @@ document.addEventListener("DOMContentLoaded", function () {
       </ul>
       <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
     </nav>
+    
 
     <a class="btn-getstarted" href="index.html#about">Get Started</a>
 
@@ -380,6 +397,23 @@ document.addEventListener("DOMContentLoaded", function () {
 
         </div>
       </div>
+      <style>
+        .counter-wrapper {
+          display: inline-flex;
+          align-items: flex-start;
+          justify-content: center;
+        }
+        .counter-wrapper .purecounter,
+        .counter-wrapper .plus-sign {
+          font-size: 2rem; /* Adjust according to your design */
+          font-weight: bold;
+          color: #fff;
+        }
+        .plus-sign {
+          margin-left: 2px; /* Small gap between number and + */
+        }
+      </style>
+      
 
     </section><!-- /About Section -->
 
@@ -387,44 +421,54 @@ document.addEventListener("DOMContentLoaded", function () {
     <section id="stats" class="stats section dark-background">
 
       <img src="assets/img/stats-bg.jpg" alt="" data-aos="fade-in">
-
+    
       <div class="container position-relative" data-aos="fade-up" data-aos-delay="100">
-
+    
         <div class="row gy-4">
-
+    
           <div class="col-lg-3 col-md-6">
             <div class="stats-item text-center w-100 h-100">
-              <span data-purecounter-start="0" data-purecounter-end="10" data-purecounter-duration="1" class="purecounter"></span>
+              <div class="counter-wrapper">
+                <span class="purecounter" data-purecounter-start="0" data-purecounter-end="100" data-purecounter-duration="1"></span><span class="plus-sign">+</span>
+              </div>
               <p>Clients</p>
             </div>
           </div><!-- End Stats Item -->
-
+    
           <div class="col-lg-3 col-md-6">
             <div class="stats-item text-center w-100 h-100">
-              <span data-purecounter-start="0" data-purecounter-end="15" data-purecounter-duration="1" class="purecounter"></span>
+              <div class="counter-wrapper">
+                <span class="purecounter" data-purecounter-start="0" data-purecounter-end="170" data-purecounter-duration="1"></span><span class="plus-sign">+</span>
+              </div>
               <p>Projects</p>
             </div>
           </div><!-- End Stats Item -->
-
+    
           <div class="col-lg-3 col-md-6">
             <div class="stats-item text-center w-100 h-100">
-              <span data-purecounter-start="0" data-purecounter-end="1453" data-purecounter-duration="1" class="purecounter"></span>
+              <div class="counter-wrapper">
+                <span class="purecounter" data-purecounter-start="0" data-purecounter-end="1453" data-purecounter-duration="1"></span><span class="plus-sign"></span>
+              </div>
               <p>Hours Of Support</p>
             </div>
           </div><!-- End Stats Item -->
-
+    
           <div class="col-lg-3 col-md-6">
             <div class="stats-item text-center w-100 h-100">
-              <span data-purecounter-start="0" data-purecounter-end="47" data-purecounter-duration="1" class="purecounter"></span>
+              <div class="counter-wrapper">
+                <span class="purecounter" data-purecounter-start="0" data-purecounter-end="47" data-purecounter-duration="1"></span><span class="plus-sign"></span>
+              </div>
               <p>Workers</p>
             </div>
           </div><!-- End Stats Item -->
-
+    
         </div>
-
+    
       </div>
-
+    
     </section><!-- /Stats Section -->
+    
+    
 
     <!-- Services Section -->
 <!-- Services Section -->
